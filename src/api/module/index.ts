@@ -1,13 +1,10 @@
 import { Hono } from 'hono'
 import { ModuleController } from './controller'
-import { getConnInfo } from 'hono/bun'
 
 const moduleRouter = new Hono()
 const controller = new ModuleController()
 
 moduleRouter.get('/', async (c) => {
-    const info = getConnInfo(c)
-    console.log(`Your remote address is ${info.remote.address}`)
     const data = await controller.getAll()
     return data
 })
