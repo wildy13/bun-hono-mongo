@@ -2,7 +2,7 @@
   "name": "bun-hono",
   "module": "server/index.ts",
   "scripts": {
-    "dev": "bun run --hot server/index.ts"
+    "dev": "bun run --hot index.ts"
   },
   "dependencies": {
     "hono": "^4.7.11",
