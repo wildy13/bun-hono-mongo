@@ -105,6 +105,6 @@ app.post('/api/login/', login)
 
 export default {
   host: process.env.HOST,
-  port: Number(process.env.PORT),
+  port: process.env.PORT,
   fetch: app.fetch
 }
